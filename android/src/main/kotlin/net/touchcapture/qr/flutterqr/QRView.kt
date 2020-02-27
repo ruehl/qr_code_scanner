@@ -96,7 +96,7 @@ class QRView(private val registrar: PluginRegistry.Registrar, id: Int) :
     }
 
     private fun resumeCamera() {
-        if (!barcodeView?.isPreviewActive ?: false) {
+        if (!(barcodeView?.isPreviewActive ?: false)) {
             barcodeView?.resume()
         }
     }
