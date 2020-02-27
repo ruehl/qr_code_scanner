@@ -90,13 +90,13 @@ class QRView(private val registrar: PluginRegistry.Registrar, id: Int) :
     }
 
     private fun pauseCamera() {
-        if (barcodeView?.isPreviewActive ?? false) {
+        if (barcodeView?.isPreviewActive ?: false) {
             barcodeView?.pause()
         }
     }
 
     private fun resumeCamera() {
-        if (!barcodeView?.isPreviewActive ?? false) {
+        if (!barcodeView?.isPreviewActive ?: false) {
             barcodeView?.resume()
         }
     }
